@@ -1,0 +1,33 @@
+<view class="bgContainer">
+    <view class="topLine"></view>
+
+    <view class="expertsView" wx:for="{{expertsArr}}" wx:key="{{index}}" data-id="{{item.id}}" catchtap="navExpertDetails">
+
+        <view class="expertsInfoView comFlex">
+
+            <view class="icon">
+                <image wx:if="{{item.icon}}" src="https://duanju.58100.com/qinggan/Uploads/{{item.icon}}" />
+            </view>
+
+            <view class="textInfo">
+                <view class="one-ellipsis" style="font-size:32rpx;">{{item.name}}</view>
+                <view class="one-ellipsis" style="font-size:28rpx;color:#999">
+                    <text>帮助{{item.times}}人</text>
+                    <!-- <text style="margin-left:20rpx;">{{item.evaluate}}人评论</text> -->
+                </view>
+            </view>
+
+            <view class="priceView">
+                ￥{{item.price}}/次
+            </view>
+
+        </view>
+
+        <view class="expertsDes one-ellipsis">
+            {{item.label}}
+        </view>
+
+    </view>
+
+
+</view>

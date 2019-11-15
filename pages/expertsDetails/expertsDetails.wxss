@@ -1,0 +1,223 @@
+.scrollView, .topbigView, .topView, .pinglunTxt, .pinglunView, .userComment,
+.userInfo, .commentContent, .commentAllBtn, .btnOneView, .advisoryView {
+    width: 100%;
+}
+
+.peopleNumView, .expterttxt, .timeView, .commentContent, .commentAllBtn,
+.txtPrompt {
+    font-size: 28rpx;
+}
+
+.btnOneView, .expterttxt, .nameView,.botpriceView {
+    color: #282828;
+}
+
+.topbigView {
+    height: 476rpx;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.topView {
+    height: 174rpx;
+    background-color: #ff639e;
+    overflow: hidden;
+}
+
+.expertIcon {
+    width: 144rpx;
+    height: 144rpx;
+    border: 6rpx solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    margin: -78rpx auto 0;
+}
+
+.expertIcon image {
+    width: 144rpx;
+    height: 144rpx;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.expertDesView {
+    width: 670rpx;
+    height: 308rpx;
+    box-shadow: 0px 40rpx 40rpx 0px rgba(0, 0, 0, 0.05);
+    border-radius: 32rpx;
+    position: absolute;
+    left: 40rpx;
+    top: 104rpx;
+    background-color: #fff;
+}
+
+.peopleNumView {
+    text-align: center;
+    color: #999;
+}
+
+.expterttxt {
+    width: 590rpx;
+    height: 108rpx;
+    margin: 30rpx auto 0;
+    line-height: 54rpx;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+/* 评论 */
+
+.pinglunTxt {
+    line-height: 56rpx;
+    box-sizing: border-box;
+    padding-left: 40rpx;
+    font-size: 40rpx;
+    color: #222;
+}
+
+.pinglunView {
+    box-sizing: border-box;
+    padding: 0 40rpx;
+    margin-top: 36rpx;
+}
+
+.userComment{
+	margin-bottom: 32rpx;
+}
+
+.userInfo {
+    height: 82rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.userIocn, .userIocn image {
+    width: 74rpx;
+    height: 74rpx;
+    border-radius: 50%;
+}
+
+.userName {
+    width: 554rpx;
+    height: 82rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nameView {
+    font-size: 32rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.timeView {
+    color: #999;
+}
+
+.commentContent {
+    box-sizing: border-box;
+    padding-left: 118rpx;
+    color: #666;
+    line-height: 44rpx;
+    margin-top: 6rpx;
+}
+
+.commentAllBtn {
+    color: #ff639e;
+    text-align: center;
+    margin-top: 32rpx;
+    padding-bottom: 30rpx;
+}
+
+/* 底部按钮 */
+
+.btnOneView {
+    height: 50px;
+    background: rgba(255, 255, 255, 1);
+    border: 2rpx solid rgba(234, 234, 234, 1);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    line-height: 102rpx;
+    text-align: center;
+    font-size: 40rpx;
+}
+
+.btnOneView image {
+    width: 44rpx;
+    height: 44rpx;
+    vertical-align: middle;
+    margin-right: 12rpx;
+}
+
+/* 咨询窗口 */
+
+.advisoryView {
+    height: 100vh;
+    background: rgba(40, 40, 40, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.problem {
+    width: 750rpx;
+    height: 750rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 64rpx 64rpx 0px 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.txtPrompt {
+    width: 670rpx;
+    height: 156rpx;
+    text-align: center;
+    line-height: 156rpx;
+    font-size: 40rpx;
+    margin: 0 auto;
+    border-bottom: 2rpx solid #e7e7e7;
+}
+
+.inputView {
+    width: 670rpx;
+    height: 492rpx;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.problemSubmit {
+    height: 100rpx;
+    border: 2rpx solid #EAEAEA;
+	display: flex;
+}
+
+textarea{
+	width: 100%;
+	min-height:452rpx; 
+}
+
+.botpriceView,.botPriceSubmit{
+	width: 50%;
+	height: 98rpx;
+	text-align: center;
+}
+
+.botpriceView{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.botPriceSubmit{
+	background-color: #FF639E;
+	line-height: 98rpx;
+	color: white;
+	font-size: 40rpx;
+}

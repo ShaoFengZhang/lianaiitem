@@ -1,0 +1,55 @@
+<view class="bgContainer">
+
+    <view class="topBannerrView comFlex" wx:if="{{}}">
+
+        <view class="askExpertsView">
+            <image src="" />
+        </view>
+
+        <view class="dailyTest">
+            <image src="" />
+        </view>
+
+    </view>
+
+    <!-- 四个分类 -->
+    <view class="topFourClassView comFlex">
+
+        <view data-id="{{item.id}}" class="classIocnView" wx:for="{{topClassArr}}" wx:key="{{index}}" catchtap="navExpertsList">
+            <image wx:if="{{item.icon}}" src="https://duanju.58100.com/qinggan/Uploads/{{item.icon}}" />
+            <view>{{item.title}}</view>
+        </view>
+
+    </view>
+
+    <!-- 今日推荐 -->
+    <view class="todayHotTxt">今日推荐</view>
+
+    <view class="hotViewList" wx:for="{{hotArticleArr}}" wx:key="{{index}}" data-id="{{item.id}}" catchtap="navArticleDetails">
+        <view class="itemIconView">
+            <image src="https://duanju.58100.com/qinggan/Uploads/{{item.pic}}" />
+        </view>
+
+        <view class="itemTxtView">
+
+            <view class="categoryTxt one-ellipsis" style="font-size:28rpx;">
+                {{item.type}}
+            </view>
+
+            <view class="deailsDes one-ellipsis" style="font-size:40rpx;">
+                {{item.title}}
+            </view>
+
+        </view>
+    </view>
+
+
+
+
+
+
+
+
+
+    <bot-bar bartype="{{bartype}}"></bot-bar>
+</view>

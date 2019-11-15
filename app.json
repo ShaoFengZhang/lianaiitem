@@ -1,0 +1,30 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/mine/mine",
+        "pages/expertsList/expertsList",
+        "pages/expertsDetails/expertsDetails",
+        "pages/myQuestion/myQuestion",
+        "pages/articleDetails/articleDetails",
+        "pages/questionDetail/questionDetail"
+    ],
+
+    "window": {
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "恋爱咨询",
+        "navigationBarTextStyle": "black"
+    },
+
+    "navigateToMiniProgramAppIdList": [
+        "wx9e2a0a0dc2556902",
+        "wxbf288d85dbc7d2a6"
+    ],
+
+    "networkTimeout": {
+        "request": 20000
+    },
+
+    "debug": false,
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,107 @@
+.bgContainer {
+    padding: 0 40rpx 146rpx;
+}
+
+image {
+    vertical-align: top;
+}
+
+/* 顶部两个banner */
+
+.topBannerrView {
+    width: 100%;
+    height: 120rpx;
+    margin-top: 32rpx;
+}
+
+.askExpertsView {
+    box-shadow: 0px 4rpx 8rpx 0px rgba(240, 146, 120, 0.5);
+}
+
+.dailyTest {
+    box-shadow: 0px 4rpx 8rpx 0px rgba(111, 176, 251, 0.5);
+}
+
+.askExpertsView image, .dailyTest image {
+    width: 322rpx;
+    height: 120rpx;
+    border-radius: 16rpx;
+}
+
+/* 顶部四个分类项目 */
+
+.topFourClassView {
+    width: 100%;
+    font-size: 32rpx;
+    color: #666;
+    text-align: center;
+    margin-top: 40rpx;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.classIocnView{
+    height: 160rpx;
+    margin-right: 50rpx;
+    margin-bottom: 40rpx;
+}
+
+.classIocnView:nth-child(4n+0){
+    margin-right: 0;
+}
+
+.classIocnView image {
+    width: 112rpx;
+    height: 112rpx;
+}
+
+.todayHotTxt {
+    color: #222;
+    font-size: 40rpx;
+    font-weight: bold;
+    /* margin-top: 40rpx; */
+}
+
+/* 推荐列表 */
+
+.hotViewList {
+    width: 670rpx;
+    height: 300rpx;
+    margin: 30rpx auto 0;
+    border-radius: 16rpx;
+    box-shadow: 0px 4rpx 8rpx 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+    color: #fff;
+    /* font-weight: bold; */
+}
+
+.itemIconView image, itemIconView {
+    width: 670rpx;
+    height: 300rpx;
+    border-radius: 16rpx;
+}
+
+.itemIconView {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.itemTxtView {
+    width: 598rpx;
+    position: absolute;
+    bottom: 30rpx;
+    left: 36rpx;
+}
+
+.categoryTxt {
+    width: 598rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.deailsDes {
+    width: 598rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+}

@@ -1,0 +1,40 @@
+<view class='bg'>
+
+    <top-bar id="topBarView" comtype="{{2}}" pageTitle="{{'我的问答'}}"></top-bar>
+
+    <view class="scrollView" style="height:{{topViewHeight}}px">
+        <scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="nextpage">
+            <view class="topLine"></view>
+            <view class="pinglunView">
+
+                <view catchtap="gotoDeatils" class="listView" wx:for="{{questionsArr}}" wx:key="{{index}}" data-id="{{item.id}}" data-expertid="{{item.expert_id}}">
+                    <view class="userComment">
+
+                        <view class="userInfo">
+
+                            <view class="userIocn">
+                                <image src="{{item.expert_icon}}" />
+                            </view>
+
+                            <view class="userName">
+                                <view class="nameView" style="font-weight:bold;">{{item.expert_name}}</view>
+                                <view class="timeView" style="font-size:28rpx;">{{item.time}}</view>
+                            </view>
+                        </view>
+
+                        <view class="commentContent">
+                            {{item.text}}
+                        </view>
+
+                    </view>
+                </view>
+            </view>
+            <!-- 暂时没有数据 -->
+            <view class='nocom' wx:if="{{!questionsArr.length && apihaveload}}">
+                <image src='https://duanju.58100.com/upload/new/nodata.png' />
+                <view>暂时还没有数据亲~</view>
+            </view>
+        </scroll-view>
+    </view>
+
+</view>

@@ -1,0 +1,8 @@
+{
+    "backgroundColor": "#000000",
+    "disableSwipeBack": true,
+    "navigationBarTitleText": "我的",
+    "usingComponents": {
+        "bot-bar": "/plug/botbar"
+    }
+}

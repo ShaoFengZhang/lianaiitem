@@ -1,0 +1,108 @@
+<view class='bg'>
+    <view class="scrollView" style="height:{{topViewHeight}}px">
+        <scroll-view scroll-y="true" style="height: 100%;">
+            <!-- 任务介绍 -->
+            <view class="topbigView">
+
+                <!-- 红色背景 -->
+                <view class="topView"></view>
+
+                <view class="expertDesView">
+
+                    <!-- 头像 -->
+                    <view class="expertIcon">
+                        <image src="{{expertIcon}}" />
+                    </view>
+
+                    <!-- 人数 -->
+                    <view class="peopleNumView">
+                        帮助
+                        <text style="color:#FF639E;">{{helpNum}}</text>人
+                        <text decode="{{true}}" style="color:#FF639E;">&ensp;&ensp; {{commentsNum}}</text>人评论
+                    </view>
+
+                    <!-- 介绍 -->
+                    <view class="expterttxt">
+                        {{expertDes}}
+                    </view>
+                </view>
+
+            </view>
+
+            <!-- 评论 -->
+
+            <view class="pinglunTxt">TA的评价</view>
+
+            <view class="pinglunView">
+
+                <view class="userComment" wx:for="{{commentArr}}" wx:key="{{index}}">
+
+                    <view class="userInfo">
+
+                        <view class="userIocn">
+                            <image src="{{item.photo}}" />
+                            <!-- <image src="https://duanju.58100.com/newadmin/Uploads/201909/5d7084c0af37a.png" /> -->
+                        </view>
+
+                        <view class="userName">
+                            <view class="nameView" style="font-weight:bold;">{{item.username}}</view>
+                            <view class="timeView">{{item.time}}</view>
+                        </view>
+                    </view>
+
+                    <view class="commentContent">
+                        {{item.text}}
+                    </view>
+
+                </view>
+
+				<!-- 暂时没有数据 -->
+                <view class='nocom' wx:if="{{!commentArr.length && commentHaveload}}">
+                    <image src='https://duanju.58100.com/upload/new/nodata.png' />
+                    <view>暂时还没有数据亲~</view>
+                </view>
+
+                <view wx:if="{{commentArr.length}}" class="commentAllBtn" catchtap="nextpage">全部{{commentsNum}}条评论 ></view>
+
+
+            </view>
+        </scroll-view>
+    </view>
+
+    <!-- 底部诉说按钮 -->
+    <view class="btnOneView" catchtap="showAdvisoryView" wx:if="{{!advisoryIfShow}}">
+        <image src="https://duanju.58100.com/upload/new/lianxibtn.png" />
+        <text>找TA诉说</text>
+    </view>
+
+    <!-- 咨询弹窗 -->
+    <view class="advisoryView" wx:if="{{advisoryIfShow}}" catchtap="showAdvisoryView">
+
+        <view class="problem" catchtap="catchtap">
+
+            <view class="txtPrompt">输入你要咨询的问题</view>
+
+            <view class="inputView">
+                <scroll-view scroll-y="true" style="452rpx;padding-top: 40rpx;">
+                    <textarea bindblur="bindblur"  bindinput="bindinput" show-confirm-bar="{{0}}" value="{{questionStr}}" cursor-spacing="{{80}}" maxlength="{{200}}" auto-height placeholder="在此描述您的问题，最好写上你的性别和年龄(最多200字)" />
+                </scroll-view>
+            </view>
+
+            <view class="problemSubmit">
+
+				<view class="botpriceView">
+					<view class="priceView" style="font-size:36rpx;">合计：¥{{price}}</view>
+					<view style="color:#999999;font-size:28rpx;">含有5次追问机会</view>
+				</view>
+
+				<view class="botPriceSubmit" catchtap="lijizhifu">
+				立即支付
+				</view>
+
+			</view>
+
+        </view>
+
+    </view>
+
+</view>

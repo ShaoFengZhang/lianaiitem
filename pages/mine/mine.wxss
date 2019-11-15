@@ -1,0 +1,51 @@
+.bgContainer {
+    background-color: #f6f6f8;
+    padding-bottom: 150rpx;
+}
+
+.cardview {
+    width: 750rpx;
+    height: 120rpx;
+    background: #fff;
+    margin-bottom: 16rpx;
+    box-sizing: border-box;
+    padding: 36rpx 40rpx;
+    color: #282828;
+    font-size: 32rpx;
+    justify-content: start;
+    position: relative;
+}
+
+.myInfoView {
+    height: 200rpx;
+    padding: 40rpx;
+}
+
+.userAvatar {
+    width: 120rpx;
+    height: 120rpx;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 24rpx;
+}
+
+.userNickName {
+    width: 526rpx;
+    font-size: 40rpx;
+    line-height: 50rpx;
+}
+
+.icon,.icon image{
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.cardTxt{
+    width: 506rpx;
+    margin: 0 28rpx;
+}
+
+.rightFlow,.rightFlow image{
+    width: 60rpx;
+    height: 60rpx;
+}

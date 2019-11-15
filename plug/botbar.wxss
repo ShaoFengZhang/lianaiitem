@@ -1,0 +1,75 @@
+.flexView {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botbarBg {
+    width: 100vw;
+    height: 146rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    color: #282828;
+    font-size: 24rpx;
+}
+
+.botBarView {
+    width: 100%;
+    height: 100rpx;
+    box-sizing: border-box;
+    padding: 0 50rpx;
+    border-top: 2rpx solid #eaeaea;
+    margin-top: 46rpx;
+    text-align: center;
+    background: #fff;
+}
+
+.indexBarView, .mineBarView {
+    width: 88rpx;
+    height: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10rpx 0;
+}
+
+.selectView{
+    color: #FF639E;
+}
+
+.icon image {
+    width: 34rpx;
+    height: 40rpx;
+}
+
+.advisoryBox{
+    width: 100vw;
+    height: 146rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 50rpx;
+}
+
+.advisoryView{
+    width: 104rpx;
+    height: 146rpx;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0rpx 0 10rpx 0;
+}
+
+.advisory_icon image{
+    width: 104rpx;
+    height: 104rpx;
+    vertical-align: top;
+}
+
+.navbarView{
+    width: 88rpx;
+    height: 100rpx;
+    margin-top: 46rpx;
+}

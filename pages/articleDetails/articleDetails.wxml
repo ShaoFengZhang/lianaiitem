@@ -1,0 +1,31 @@
+<view class="bgContainer">
+
+    <view class="topbox">
+        <view class="articleTitle">
+            <text space="nbsp" decode="{{true}}">{{articleDetails.title}}</text>
+        </view>
+
+        <view class="articleTagView">
+            <text style="color:#FF639E;">{{articleDetails.type}}</text>
+            <text class="readNumView">阅读：{{articleDetails.times}}</text>
+        </view>
+
+        <view class="articleImage" wx:if="{{articleDetails.pic}}">
+            <image src="https://duanju.58100.com/qinggan/Uploads/{{articleDetails.pic}}" />
+        </view>
+
+        <view class="articleDeatils">
+            <text space="nbsp" decode="{{true}}">{{articleDetails.content}}</text>
+        </view>
+
+    </view>
+
+
+
+    <view class="shareBtn">
+        <image src="https://duanju.58100.com/upload/lianai/articleShare.png" />
+        <button id="shareBtn" open-type="share"></button>
+    </view>
+
+
+</view>

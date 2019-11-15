@@ -1,0 +1,7 @@
+{
+    "backgroundColor": "#000000",
+    "disableSwipeBack": true,
+    "usingComponents": {
+        "bot-bar": "/plug/botbar"
+    }
+}

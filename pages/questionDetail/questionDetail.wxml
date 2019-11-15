@@ -1,0 +1,92 @@
+<view class='bg'>
+
+    <top-bar id="topBarView" comtype="{{2}}" pageTitle="{{'问题详情'}}"></top-bar>
+
+    <view class="scrollView" style="height:{{topViewHeight}}px">
+        <scroll-view scroll-y="true" style="height: 100%;">
+            <view class="topLine"></view>
+
+            <view class="qAndaView">
+                <view style="background-color:#FAE2EC;padding:20rpx;border-radius:16rpx;">
+                    <view class="aFewques">首次提问</view>
+                    <view class="answerView">
+                        {{question.text}}
+                    </view>
+                </view>
+
+            </view>
+
+            <view class="qAndaView" wx:for="{{answerArr}}" wx:key="{{index}}" >
+                <view style="background-color:{{item.qa==1?'#EDF8FC':'#FAE2EC'}};padding:20rpx;border-radius:16rpx;">
+                    <view class="aFewques" wx:if="{{item.qa==1}}">专家回复</view>
+                    <view class="aFewques" wx:if="{{item.qa==0}}">第{{index/2+1-0.5}}次追问</view>
+                    <view class="answerView">
+                        {{item.text}}
+                    </view>
+                </view>
+            </view>
+
+            <view catchtap="showHidedAvisoryView" class="combtn questionBtn" wx:if="{{count!=0 && answerArr[answerArr.length-1].qa==1}}">
+                继续追问（剩余{{count}}次）
+            </view>
+
+            <view class="combtn questionBtn" catchtap="showmask" wx:if="{{answerArr[answerArr.length-1].qa==0 || !answerArr.length}}">
+                等待专家回复
+            </view>
+
+            <view catchtap="showHideCommentView" class="combtn questionBtn" wx:if="{{1}}" wx:if="{{count==0 && answerArr[answerArr.length-1].qa==1}}">
+                <text>我要评价</text>
+                <button wx:if="{{canIUse && !hasUserInfo }}" id="shareBtn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo"></button>
+            </view>
+
+            <view class="combtn overBtn" wx:if="{{count==0 && answerArr[answerArr.length-1].qa==1}}">
+                问答已结束
+            </view>
+
+        </scroll-view>
+    </view>
+
+    <!-- 咨询弹窗 -->
+    <view class="advisoryView" wx:if="{{ifShowAdvisoryView}}" catchtap="showHidedAvisoryView">
+
+        <view class="problem" catchtap="catchtap">
+
+            <view class="txtPrompt">输入你要咨询的问题</view>
+
+            <view class="inputView">
+                <scroll-view scroll-y="true" style="height:452rpx;padding-top: 40rpx;">
+                    <textarea bindblur="quesbindblur" bindinput="quesbindinput" show-confirm-bar="{{0}}" value="{{questionStr}}" cursor-spacing="{{80}}" maxlength="{{200}}" auto-height placeholder="在此描述您的问题，最好写上你的性别和年龄(最多200字)" />
+                </scroll-view>
+            </view>
+
+            <view class="problemSubmit" catchtap="submitquestion">
+                提交
+            </view>
+
+        </view>
+
+    </view>
+
+    <!-- 评论弹窗 -->
+    <view class="advisoryView" wx:if="{{ifShowCommentView}}" catchtap="showHideCommentView">
+
+        <view class="problem" catchtap="catchtap">
+
+            <view class="txtPrompt">填写评论</view>
+
+            <view class="inputView">
+                <scroll-view scroll-y="true" style="height:452rpx;padding-top: 40rpx;">
+                    <textarea bindblur="combindblur" bindinput="combindinput" show-confirm-bar="{{0}}" value="{{commentTxt}}" cursor-spacing="{{80}}" maxlength="{{200}}" auto-height placeholder="输入您的意见(最多200字)" />
+                </scroll-view>
+            </view>
+
+            <view class="problemSubmit" catchtap="submitCommetn">
+                提交
+            </view>
+
+        </view>
+
+    </view>
+
+
+</view>

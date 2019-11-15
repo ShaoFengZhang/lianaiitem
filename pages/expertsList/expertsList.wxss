@@ -1,0 +1,59 @@
+.bgContainer {
+    background-color: #F3F5F9;
+}
+
+.topLine{
+    width: 100%;
+    height: 4rpx;
+    background: #F3F5F9;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.expertsView{
+    width: 100%;
+    height: 214rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 40rpx 26rpx 40rpx;
+    color: #282828;
+    margin-bottom: 16rpx;
+}
+
+.expertsInfoView{
+    width: 100%;
+    height: 80rpx;
+    justify-content: start;
+}
+
+.icon,.icon image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.icon{
+    margin-right: 24rpx;
+}
+
+.textInfo{
+    margin-right: 24rpx;
+}
+
+.textInfo,.textInfo view{
+    width: 422rpx;
+}
+
+.priceView{
+    color: #FF639E;
+    font-size: 36rpx;
+}
+
+.expertsDes{
+    width: 100%;
+    font-size: 28rpx;
+    box-sizing: border-box;
+    padding: 0 26rpx 0 104rpx;
+    margin-top: 8rpx; 
+}

@@ -1,0 +1,65 @@
+.bgContainer {
+    color: #282828;
+    font-size: 28rpx;
+}
+
+.topbox{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40rpx 40rpx 0;
+}
+
+.articleTitle {
+    width: 100%;
+    color: #171f24;
+    font-size: 40rpx;
+    line-height: 68rpx;
+}
+
+.articleTagView {
+    margin-top: 12rpx;
+}
+
+.articleTagView text {
+    display: inline-block;
+    height: 40rpx;
+    box-sizing: border-box;
+}
+
+.readNumView {
+    padding: 0rpx 12rpx;
+    border-radius: 20rpx;
+    border: 2rpx solid #e7e7e7;
+    margin-left: 40rpx;
+    color: #999;
+}
+
+.articleDeatils {
+    width: 100%;
+    font-size: 32rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    line-height: 56rpx;
+    margin: 40rpx 0 30rpx 0;
+}
+
+.articleImage {
+    box-shadow: 0px 8rpx 16rpx 0px rgba(0, 0, 0, 0.1);
+    margin-top: 40rpx;
+}
+
+.articleImage, .articleImage image {
+    width: 670rpx;
+    height: 480rpx;
+    border-radius: 32rpx;
+    /* margin-bottom: 60rpx; */
+}
+
+.shareBtn,.shareBtn image{
+    width: 710rpx;
+    height: 160rpx;
+}
+
+.shareBtn{
+    margin: 0 auto;
+    position: relative;
+}

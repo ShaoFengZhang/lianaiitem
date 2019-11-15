@@ -1,0 +1,52 @@
+<view class="bgContainer">
+
+    <view class="myInfoView comFlex cardview">
+
+        <view class="userAvatar">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+
+        <view class="userNickName one-ellipsis">
+            <open-data type="userNickName" lang="zh_CN"></open-data>
+        </view>
+
+    </view>
+
+    <view class="myQuesAndAns comFlex cardview" catchtap="navMyQuesAndAns">
+
+        <view class="icon">
+            <image src="https://duanju.58100.com/upload/lianai/mine_wenda_icon.png" />
+        </view>
+
+        <view class="cardTxt one-ellipsis">我的问答</view>
+
+        <view class="rightFlow">
+            <image src="https://duanju.58100.com/upload/new/right.png" />
+        </view>
+
+    </view>
+
+    <view class="helpAndFeedbook comFlex cardview">
+
+        <view class="icon">
+            <image src="https://duanju.58100.com/upload/lianai/mine_bangzhu_icon.png" />
+        </view>
+
+        <view class="cardTxt one-ellipsis">帮助与反馈</view>
+
+        <view class="rightFlow">
+            <image src="https://duanju.58100.com/upload/new/right.png" />
+        </view>
+
+        <button id="shareBtn" open-type="contact"></button>
+
+    </view>
+
+
+
+
+
+
+    <bot-bar bartype="{{bartype}}"></bot-bar>
+
+</view>

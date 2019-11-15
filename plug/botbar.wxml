@@ -1,0 +1,42 @@
+<view class="botbarBg">
+
+    <view class="botBarView flexView">
+
+        <view class="indexBarView flexView" >
+
+            <view class="icon">
+                <image wx:if="{{bartype==1}}" src="{{index_select_icon}}" />
+                <image wx:if="{{bartype!=1}}" src="{{index_noselect_icon}}" />
+            </view>
+            <view class="{{bartype==1?'selectView':null}}">首页</view>
+
+        </view>
+
+        <view class="mineBarView flexView">
+
+            <view class="icon">
+                <image wx:if="{{bartype==2}}" src="{{mine_select_icon}}" />
+                <image wx:if="{{bartype!=2}}" src="{{mine_noselect_icon}}" />
+            </view>
+
+            <view class="{{bartype==2?'selectView':null}}">我的</view>
+        </view>
+
+    </view>
+
+    <view class="advisoryBox flexView">
+
+        <view class="navbarView" data-path="1" catchtap="botBarClickEvent"></view>
+
+        <view class="advisoryView" data-path="3" catchtap="botBarClickEvent">
+            <view class="advisory_icon">
+                <image src="https://duanju.58100.com/upload/lianai/advisory_icon.png" />
+            </view>
+            <view class="{{bartype==3?'selectView':null}}">我要咨询</view>
+        </view>
+
+        <view class="navbarView" data-path="2" catchtap="botBarClickEvent"></view>
+
+    </view>
+
+</view>
