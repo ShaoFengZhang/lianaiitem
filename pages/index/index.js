@@ -53,7 +53,19 @@ Page({
                     url: `/pages/articleDetails/articleDetails?articleId=${options.articleId}`,
                 })
             },800)
-        }
+        };
+
+        if (options && options.scene) {//记得改条件
+            util.loading();
+            console.log('SCENE', options);
+            let scene = decodeURIComponent(options.scene);
+            this.posterUid = scene.split('&')[0];
+            this.posterImgId = scene.split('&')[1];
+            wx.navigateTo({
+                url: '',
+            });
+            wx.hideLoading();
+        };
 
     },
 
@@ -78,8 +90,14 @@ Page({
     //跳转专家列表
     navExpertsList:function(e){
         let id=e.currentTarget.dataset.id;
+        let url=null;
+        if(id){
+            url = `/pages/expertsList/expertsList?classId=${id}`
+        }else{
+            url = `/pages/expertsList/expertsList`
+        }
         wx.navigateTo({
-            url: `/pages/expertsList/expertsList?classId=${id}`,
+            url: url,
         })
     },
 
@@ -118,6 +136,18 @@ Page({
                 hotArticleArr: _this.data.hotArticleArr.concat(res.article)
             })
         })
+    },
+
+    //传话通
+    navChuanHua:function(){
+        wx.navigateTo({
+            url: `/pages/chuanHuaTong/chuanHuaTong`,
+        })
+    },
+
+    // 收集formid
+    formSubmit: function (e) {
+        util.formSubmit(app, e);
     },
 
 })

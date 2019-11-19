@@ -1,0 +1,47 @@
+<view class="bgContainer">
+
+    <view class="topImgView">
+        <image src="https://duanju.58100.com/upload/lianai/tongHuaTopIcon.png" />
+    </view>
+
+    <view class="nickNameInputView">
+
+        <view class="inputTitle">
+            在这里输入指定人的昵称
+        </view>
+
+        <view class="WeakPrompt">
+            不能是备注哦，必须是微信呢称哦
+        </view>
+
+        <view class="inputView">
+            <input value="{{userNickName}}" bindblur="inputBindBlur" bindinput="inputBindInput" maxlength="{{20}}" class="weui-input" auto-focus placeholder="在这里输入指定人的昵称" />
+        </view>
+
+    </view>
+
+    <view class="sentenceView">
+        <view class="inputTitle">
+            然后输入你想说的话
+        </view>
+
+        <view class="WeakPrompt">
+            要文明发言哦
+        </view>
+
+        <view class="textAreaView">
+            <textarea bindblur="textBindBlur" bindinput="textBindInput" maxlength="50" auto-height placeholder="最多50个字符哦~" />
+        </view>
+    </view>
+
+
+
+    <view class="botGenerateBtn" catchtap="judgeTextFunc">
+        <text>生成你的传话筒</text>
+        <form bindsubmit="formSubmit" report-submit="{{true}}">
+            <button catchtap="catchtap" id="shareBtn" formType="submit" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo"></button>
+        </form>
+
+    </view>
+
+</view>

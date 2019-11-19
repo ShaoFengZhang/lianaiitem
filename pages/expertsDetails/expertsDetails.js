@@ -10,6 +10,7 @@ Page({
         questionStr: '',
         commentsNum:0,
         commentHaveload:0,
+        isios:1,
     },
 
     onLoad: function (options) {
@@ -26,7 +27,17 @@ Page({
             this.expert_id = options.expert_id;
             this.loadExpertDetails();
             this.loadCommentNums();
-        }
+        };
+
+        wx.getSystemInfo({
+            success(res) {
+                if (res.system.slice(0, 3) != 'iOS') {
+                    _this.setData({
+                        isios: 0,
+                    });
+                }
+            }
+        });
         
     },
 

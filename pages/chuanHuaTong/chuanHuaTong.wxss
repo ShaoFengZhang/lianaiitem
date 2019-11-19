@@ -1,0 +1,93 @@
+.bgContainer {
+    background-color: #fff;
+}
+
+.topImgView {
+    margin: 0 auto 0;
+}
+
+.topImgView, .topImgView image {
+    width: 686rpx;
+    height: 306rpx;
+}
+
+.nickNameInputView {
+    width: 670rpx;
+    height: 290rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 10rpx 24rpx 4rpx rgba(0, 0, 0, 0.1);
+    border-radius: 16rpx;
+    margin: 40rpx auto 0;
+    overflow: hidden;
+}
+
+.inputTitle {
+    color: #000;
+    font-size: 32rpx;
+    text-align: center;
+    margin-top: 44rpx;
+    font-weight: bold;
+}
+
+.WeakPrompt {
+    color: #999;
+    font-size: 28rpx;
+    text-align: center;
+    margin-top: 10rpx;
+}
+
+.inputView {
+    width: 590rpx;
+    height: 88rpx;
+    background: rgba(243, 245, 249, 1);
+    border-radius: 16rpx;
+    margin: 24rpx auto 0;
+    box-sizing: border-box;
+    padding: 8rpx 12rpx;
+}
+
+.weui-input {
+    width: 100%;
+    height: 100%;
+    font-size: 28rpx;
+}
+
+.sentenceView {
+    width: 670rpx;
+    height: 400rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 10rpx 24rpx 4rpx rgba(0, 0, 0, 0.1);
+    border-radius: 16rpx;
+    margin: 32rpx auto 0;
+    overflow: hidden;
+}
+
+.textAreaView {
+    font-size: 28rpx;
+    width: 590rpx;
+    height: 200rpx;
+    background: rgba(243, 245, 249, 1);
+    border-radius: 16rpx;
+    margin: 22rpx auto 0;
+    padding: 32rpx;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 100%;
+    min-height: 100%;
+}
+
+.botGenerateBtn {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 88rpx;
+    color: #4994FE;
+    line-height: 88rpx;
+    text-align: center;
+    box-shadow:0px 2px 0px 0px rgba(40,40,40,0.1);
+    border-top: 2rpx solid #E9E9E9;
+    font-size: 36rpx;
+}

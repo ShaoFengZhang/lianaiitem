@@ -6,7 +6,9 @@
         "pages/expertsDetails/expertsDetails",
         "pages/myQuestion/myQuestion",
         "pages/articleDetails/articleDetails",
-        "pages/questionDetail/questionDetail"
+        "pages/questionDetail/questionDetail",
+        "pages/chuanHuaTong/chuanHuaTong",
+        "pages/qrCode/qrCode"
     ],
 
     "window": {

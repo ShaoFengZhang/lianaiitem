@@ -70,7 +70,7 @@
     </view>
 
     <!-- 底部诉说按钮 -->
-    <view class="btnOneView" catchtap="showAdvisoryView" wx:if="{{!advisoryIfShow}}">
+    <view class="btnOneView" catchtap="showAdvisoryView" wx:if="{{!advisoryIfShow && !isios}}">
         <image src="https://duanju.58100.com/upload/new/lianxibtn.png" />
         <text>找TA诉说</text>
     </view>

@@ -1,13 +1,21 @@
 <view class="bgContainer">
 
-    <view class="topBannerrView comFlex" wx:if="{{}}">
+    <view class="topBannerrView comFlex">
 
-        <view class="askExpertsView">
-            <image src="" />
+        <view class="askExpertsView" catchtap="navExpertsList">
+            <image src="https://duanju.58100.com/upload/lianai/lioanaiIcon.png" />
+            <form bindsubmit="formSubmit" report-submit="{{true}}">
+                <button formType="submit" class='Sbtn'>
+                </button>
+            </form>
         </view>
 
-        <view class="dailyTest">
-            <image src="" />
+        <view class="dailyTest" catchtap="navChuanHua">
+            <image src="https://duanju.58100.com/upload/lianai/chuanhuaIcon.png" />
+            <form bindsubmit="formSubmit" report-submit="{{true}}">
+                <button formType="submit" class='Sbtn'>
+                </button>
+            </form>
         </view>
 
     </view>
